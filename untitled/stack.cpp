@@ -5,6 +5,7 @@ class STACK
 private:
     T* stack;
     int count;
+
 public:
     void push(T item)
 {
@@ -26,4 +27,19 @@ public:
             delete[] tmp;
         }
     }
+
+    T pop()
+        {
+            T tmp;
+            if (count == 0)
+                return tmp;
+            count--;
+            return stack[count];
+        }
+
+        bool IsEmpty()
+        {
+            return count == 0;
+        }
+
 };

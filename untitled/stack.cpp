@@ -1,5 +1,6 @@
 template <typename T>
 
+<<<<<<< HEAD
 class STACK //класс для реализации стека
 {
 private:
@@ -40,6 +41,48 @@ public:
         bool IsEmpty() //если наш стек пуст
         {
             return count == 0; //если количество элементов в стеке равна 0
+=======
+class STACK
+{
+private:
+    T* stack;
+    int count;
+
+public:
+    void push(T item)
+{
+        T* tmp;
+        tmp = stack;
+        stack = new T[count + 1];
+
+        count++;
+
+        for (int i = 0; i < count - 1; i++)
+        {
+            stack[i] = tmp[i];
+        }
+
+        stack[count - 1] = item;
+
+        if (count > 1)
+        {
+            delete[] tmp;
+        }
+    }
+
+    T pop()
+        {
+            T tmp;
+            if (count == 0)
+                return tmp;
+            count--;
+            return stack[count];
+        }
+
+        bool IsEmpty()
+        {
+            return count == 0;
+>>>>>>> main
         }
 
 };

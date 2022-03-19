@@ -1,45 +1,45 @@
 template <typename T>
 
-class STACK
+class STACK //класс для реализации стека
 {
 private:
-    T* stack;
-    int count;
+    T* stack; //стек
+    int count; //количество элементов в стеке
 
 public:
-    void push(T item)
+    void push(T item) //добавление элемента в стек
 {
-        T* tmp;
+        T* tmp; //временная переменная указатель
         tmp = stack;
-        stack = new T[count + 1];
+        stack = new T[count + 1]; //выделение больше памяти в стеке чем было
 
-        count++;
+        count++; //количество элементов в стеке увеличиваем
 
         for (int i = 0; i < count - 1; i++)
         {
-            stack[i] = tmp[i];
+            stack[i] = tmp[i]; //копируем данные из tmp (куда он указывает) в наш стек
         }
 
-        stack[count - 1] = item;
+        stack[count - 1] = item; //добавляем последний элемент
 
         if (count > 1)
         {
-            delete[] tmp;
+            delete[] tmp; //освобождаем память
         }
     }
 
-    T pop()
+    T pop() //изъятие элемента из стека
         {
             T tmp;
-            if (count == 0)
+            if (count == 0) //если наш стек пуст
                 return tmp;
-            count--;
-            return stack[count];
+            count--; //уменьшаем количество элементов в стеке
+            return stack[count]; //возвращаем  элемент стека
         }
 
-        bool IsEmpty()
+        bool IsEmpty() //если наш стек пуст
         {
-            return count == 0;
+            return count == 0; //если количество элементов в стеке равна 0
         }
 
 };

@@ -8,14 +8,14 @@
 #include "Person.h"
 #include "stack.cpp"
 
-class PersonKeeper
+class PersonKeeper //класс для работы со стеком
 {
 
     public:
-        static PersonKeeper* instance();
-        STACK <Person>* readPersons(std::istream& stream);
-        void writePersons(STACK <Person> a, std::ostream &stream);
+        static PersonKeeper* instance(); //создаем либо возвращаем экземпляр нашего класса
+        STACK <Person>* readPersons(std::istream& stream); //метод чтения данных из файла и возвращения стека
+        void writePersons(STACK <Person> a, std::ostream &stream); //запись данных в файл
 
     private:
-        static PersonKeeper* singleton;
+        static PersonKeeper* singleton; //переменная которая хранит наш экземпляр класса
 };

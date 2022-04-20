@@ -1,6 +1,5 @@
-template <typename T>
+/*template <typename T>
 
-<<<<<<< HEAD
 class STACK //класс для реализации стека
 {
 private:
@@ -8,11 +7,11 @@ private:
     int count; //количество элементов в стеке
 
 public:
-    void push(T item) //добавление элемента в стек
-{
+    void push(T item) //добавить элемент в стек
+    {
         T* tmp; //временная переменная указатель
         tmp = stack;
-        stack = new T[count + 1]; //выделение больше памяти в стеке чем было
+        stack = new T[count + 1]; //выделить больше памяти в стеке чем было
 
         count++; //количество элементов в стеке увеличиваем
 
@@ -29,60 +28,22 @@ public:
         }
     }
 
-    T pop() //изъятие элемента из стека
+    T pop() //изъять элемент из стека
+    {
+        T tmp;
+        if (count == 0) //если наш стек пуст
         {
-            T tmp;
-            if (count == 0) //если наш стек пуст
-                return tmp;
-            count--; //уменьшаем количество элементов в стеке
-            return stack[count]; //возвращаем  элемент стека
+            return tmp;
         }
 
-        bool IsEmpty() //если наш стек пуст
-        {
-            return count == 0; //если количество элементов в стеке равна 0
-=======
-class STACK
-{
-private:
-    T* stack;
-    int count;
-
-public:
-    void push(T item)
-{
-        T* tmp;
-        tmp = stack;
-        stack = new T[count + 1];
-
-        count++;
-
-        for (int i = 0; i < count - 1; i++)
-        {
-            stack[i] = tmp[i];
-        }
-
-        stack[count - 1] = item;
-
-        if (count > 1)
-        {
-            delete[] tmp;
-        }
+        count--; //уменьшаем количество элементов в стеке
+        return stack[count]; //возвращаем  элемент стека
     }
 
-    T pop()
-        {
-            T tmp;
-            if (count == 0)
-                return tmp;
-            count--;
-            return stack[count];
-        }
-
-        bool IsEmpty()
-        {
-            return count == 0;
->>>>>>> main
-        }
+    bool IsEmpty() //если наш стек пуст
+    {
+        return count == 0; //если количество элементов в стеке равна 0
+    }
 
 };
+*/

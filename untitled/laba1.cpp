@@ -1,10 +1,12 @@
+/*#include <QCoreApplication>
 #include <iostream>
 #include <fstream>
 #include "Person.h"
 #include "PersonKeeper.cpp"
 
-int main()
+int main(int argc, char* argv[])
 {
+    QCoreApplication a(argc, argv);
     PersonKeeper personKeeperInstance;	//создаем экземпляр класса personKeeperInstance
 
     std::fstream file_in;
@@ -21,4 +23,7 @@ int main()
     personKeeperInstance.writePersons(st, file_out); //записываем в файл данные из стека
 
     file_out.close();
+
+    return a.exec();
 }
+*/

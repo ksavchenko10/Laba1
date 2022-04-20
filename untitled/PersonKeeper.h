@@ -1,4 +1,4 @@
-#ifndef PERSONKEEPER_H
+/*#ifndef PERSONKEEPER_H
 #define PERSONKEEPER_H
 
 #endif // PERSONKEEPER_H
@@ -12,10 +12,12 @@ class PersonKeeper //класс для работы со стеком
 {
 
     public:
-        static PersonKeeper* instance(); //создаем либо возвращаем экземпляр нашего класса
+        static PersonKeeper* instance(); //создаем либо возвращаем экземпляр нашего класса-синглтон
         STACK <Person>* readPersons(std::istream& stream); //метод чтения данных из файла и возвращения стека
         void writePersons(STACK <Person> a, std::ostream &stream); //запись данных в файл
 
     private:
-        static PersonKeeper* singleton; //переменная которая хранит наш экземпляр класса
+        static PersonKeeper* singleton; //переменная которая хранит наш экземпляр класса-синглтона
 };
+*/
+
